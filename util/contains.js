@@ -1,4 +1,3 @@
-({define:typeof define!=='undefined'?define:function(deps, factory){module.exports = factory(exports);}}).
 define([], function(){
 return contains;
 
