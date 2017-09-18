@@ -39,7 +39,7 @@ function parse(/*String|Object*/query, parameters){
 		}
 		return topTerm;
 	}
-	if(query.charAt(0) == "?"){
+	if(query.charAt(0) === "?"){
 		throw new URIError("Query must not start with ?");
 	}
 	if(exports.jsonQueryCompatible){
@@ -66,7 +66,7 @@ function parse(/*String|Object*/query, parameters){
 		}
 		return operator + '(' + property + "," + value + ")";
 	});
-	if(query.charAt(0)=="?"){
+	if(query.charAt(0)==="?"){
 		query = query.substring(1);
 	}
 	var leftoverCharacters = query.replace(/(\))|([&\|,])?([\+\*\$\-:\w%\._]*)(\(?)/g,

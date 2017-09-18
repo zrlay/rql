@@ -1,16 +1,19 @@
 {
-  "name": "rql",
-  "version": "0.4.0",
-  "author": "Kris Zyp",
+  "name": "rql-angular",
+  "version": "0.4.1",
+  "author": "zrlay",
   "contributors": [
+    "Kris Zyp <kriszyp@gmail.com>",
     "Vladimir Dronnikov <dronnikov@gmail.com>"
   ],
   "keywords": [
     "resource",
     "query",
-    "uri"
+    "uri",
+    "rql",
+    "angularjs"
   ],
-  "description": "Query language for the web, NoSQL",
+  "description": "AngularJS module for RQL.",
   "licenses": [
     {
       "type": "AFLv2.1",
@@ -26,25 +29,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/kriszyp/rql"
+    "url": "https://github.com/zrlay/rql"
   },
-  "maintainers": [
-    {
-      "name": "Kris Zyp",
-      "email": "kriszyp@gmail.com"
-    }
-  ],
   "mappings": {
-    "patr": "http://github.com/kriszyp/patr/zipball/v0.2.1",
-    "promised-io": "http://github.com/kriszyp/promised-io/zipball/v0.2.1"
+    "patr": "https://github.com/kriszyp/patr/zipball/v0.2.1",
+    "promised-io": "https://github.com/kriszyp/promised-io/zipball/v0.2.1"
   },
   "dependencies": {
     "promised-io": ">=0.3.0"
   },
   "devDependencies": {
-    "intern-geezer": "^2.1.1"
+    "intern-geezer": "^2.1.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0"
   },
   "scripts": {
+    "build.angularjs": "webpack",
     "test": "intern-client config=test/intern",
     "test.sauce": "intern-runner config=test/intern",
     "test.proxy": "intern-runner config=test/intern --proxyOnly"
